@@ -19,7 +19,7 @@ generateBtn.addEventListener('click', writePassword);
 function writePassword() {
   var charCount = prompt('How many charachters would you like your password to contain? (Between 8 and 128!');
   
-  if(charCount !>= 8 || charCount !<= 128) {
+  if(charCount < 8 || charCount > 128) {
     alert("Your password must have at least 8 and no more than 128 characters, try again!");
   } 
 
@@ -30,9 +30,13 @@ function writePassword() {
     var specialChar = confirm("Would you like to include special characters?");
   }
 
-  if(upperCase != ture && lowerCase != ture && numChoice != true && specialChar != true) {
-    alert("You must choose one option, please try again!")
+  if(upperCase == false && lowerCase == false && numChoice == false && specialChar == false) {
+    alert("You must choose one option, please try again!");
   }
+
+
+
+
 
 
 
