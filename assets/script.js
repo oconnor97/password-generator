@@ -53,7 +53,7 @@ function writePassword() {
   else if (selectUpper && selectLower && selectSpecial) {
     assignedChars = upperCase.concat(numChoice, specialChar);
   }
-  else if (selectLower && selectNum && selectSpecial); {
+  else if (selectLower && selectNum && selectSpecial) {
     assignedChars = lowercase.concat(numChoice, specialChar);
   }
   //When 2 selections are made
@@ -89,6 +89,14 @@ function writePassword() {
     assignedChars = specialChar;
   }
 
+  var password = [];
+
+  for (var i = 0; i < charCount ; i++) {
+    var pickChoices = assignedChars[Math.floor(Math.random() * assignedChars.length)];
+    password.push(pickChoices);
+  }
+
+  
 }
 
 
