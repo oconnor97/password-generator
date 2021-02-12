@@ -8,7 +8,7 @@ For this assignment I was tasked to allow a user to imput different sets of char
 * CSS
 * JavaScript
 
-![](assets/images/screenshot.png)
+![](/assets/Images/screenshot.png)
 
 ## deployed page
 
