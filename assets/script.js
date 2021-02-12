@@ -20,13 +20,14 @@ generateBtn.addEventListener('click', writePassword);
 
 // My code
 
-function writePassword() {
+function writePassword() { 
   //Lets the user set the total characters to inclde in the password
   var charCount = prompt('How many charachters would you like your password to contain? (Between 8 and 128!');
   
   if(charCount < 8 || charCount > 128) {
     alert("Your password must have at least 8 and no more than 128 characters, try again!");
   };
+  
 
   if(charCount >= 8 && charCount <= 128) {
     //Asks the user to confirm or deny password criteria
@@ -95,9 +96,17 @@ function writePassword() {
     var pickChoices = assignedChars[Math.floor(Math.random() * assignedChars.length)];
     password.push(pickChoices);
   }
-
-  
+  //This joins the password into a string so it can be put into the text box in the HTML
+  var finalPass = password.join("");
+  UserInput(finalPass);
+  return finalPass;
 }
+//updates the text box in the HTMLDOM
+function UserInput(finalPass) {
+  document.getElementById("password").textContent = finalPass;
+}
+
+
 
 
 
