@@ -14,9 +14,11 @@ body,
 
 body {
   font-family: sans-serif;
-  background-color: #f9fbfd;
+  background-color: #094480;
 }
-
+h1 {
+  color: white;
+}
 .wrapper {
   padding-top: 30px;
   padding-left: 20px;
